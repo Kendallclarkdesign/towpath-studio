@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Towpath Studio</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">Towpath <span>Studio</span></div>
+  <select id="projectSelect" aria-label="Project"></select>
+  <button id="newProject" class="ghost">New</button>
+  <button id="renameProject" class="ghost">Rename</button>
+  <div class="spacer"></div>
+  <div class="devices" role="group" aria-label="Preview size">
+    <button data-w="100%" class="on">Desktop</button>
+    <button data-w="820px">Tablet</button>
+    <button data-w="390px">Mobile</button>
+  </div>
+  <button id="saveVersion">Save version</button>
+  <button id="versionsBtn" class="ghost">History</button>
+  <a id="crmLink" class="ghost link" href="https://YOUR-CRM-DOMAIN" target="_blank" rel="noopener">Open CRM</a>
+</header>
+<main class="work">
+  <aside class="tree">
+    <div class="tree-head">Files <button id="addFile" class="ghost small" title="Add file">+</button></div>
+    <ul id="fileList"></ul>
+    <div class="chat">
+      <div class="tree-head">Assistant <button id="chatClear" class="ghost small">Clear</button></div>
+      <select id="engine" aria-label="Model">
+        <option value="or-free">North Mini Code (OpenRouter, free)</option>
+        <option value="cf-kimi">Kimi K2.6 (Cloudflare, free tier)</option>
+        <option value="or-kimi">Kimi K2.6 (OpenRouter, paid)</option>
+      </select>
+      <div id="chatLog"></div>
+      <textarea id="chatInput" rows="3" placeholder="Describe the site or the change. Cmd+Enter to send."></textarea>
+      <button id="chatSend">Send</button>
+    </div>
+  </aside>
+  <section class="editor" id="editor"></section>
+  <section class="preview">
+    <div class="preview-bar"><span id="status">Ready</span><button id="reload" class="ghost small">Reload</button></div>
+    <div class="frame-wrap"><iframe id="frame" title="Preview" sandbox="allow-scripts allow-forms allow-modals"></iframe></div>
+  </section>
+</main>
+<dialog id="versions"><h3>Version history</h3><ul id="versionList"></ul><form method="dialog"><button class="ghost">Close</button></form></dialog>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.52.2/min/vs/loader.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
