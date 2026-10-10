@@ -2,7 +2,7 @@
 
 A browser site builder with an AI assistant: a Monaco code editor, a sandboxed live preview with Desktop, Tablet, and Mobile views, version history, and a chat that creates and edits the open project's files. Plain HTML, CSS, and JavaScript with no build step. Part of Kendall Clark's portfolio.
 
-Case study: https://kendallclark.design/case-study-towpath-studio
+Case study: https://kendallclarkdesign.github.io/portfolio/case-study-towpath-studio
 
 ## How it works
 
